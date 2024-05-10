@@ -1,0 +1,16 @@
+<table>
+	<thead>
+		<tr>
+			<th>Index</th>
+			<th>Date</th>
+			<th>Amount</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let point of dataPoints; let i = index">
+			<td>{{ i }}</td>
+			<td>{{ point.date }}</td>
+			<td>{{ point.amount }}</td>
+		</tr>
+	</tbody>
+</table>

@@ -1,0 +1,36 @@
+<div class="container">
+	<div class="d-flex gap-2">
+		<div class="alert alert-info">
+			<h1>Test Objective</h1>
+			<p>From the raw data points received from the service, do the following <strong>in any order you wish</strong> to show your skills:
+			<ol>
+				<li>Improve the table's CSS and data display</li>
+				<li>Add a graph for the data</li>
+				<li>Complete the "Refresh Data" button implementation to get new random data points</li>
+				<li>Calculate the <strong>average amount per quarter</strong> (i.e. 2024 Q1 = $12,345) and display in the table and graph</li>
+			</ol>
+			<h2>Notes</h2>
+			<ul>
+				<li>Ask any question you wish</li>
+				<li>Make any changes / use any library / google search you need</li>
+				<li>If you do not have time to do something, write out a comment explaining what you would like to do and why</li>
+			</ul>
+		</div>
+
+		<div class="pt-1 align-self-bottom">
+			<button class="btn btn-primary" (click)="triggerRandomizeData()">Refresh Data</button>
+		</div>
+	</div>
+	<hr>
+
+	<div class="d-flex gap-3">
+		<div class="flex-grow-1">
+			<h1>Table View</h1>
+			<app-table [dataPoints]="dataPoints$ | async"></app-table>
+		</div>
+		<div class="flex-grow-1">
+			<h1>Graph View</h1>
+			<app-graph [dataPoints]="dataPoints$ | async"></app-graph>
+		</div>
+	</div>
+</div>
